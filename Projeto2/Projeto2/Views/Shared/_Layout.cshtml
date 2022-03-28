@@ -26,13 +26,15 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
-                    <partial name="_LoginPartial" />
+                    <!--permite os links de autenticação-->
+                    <!--<partial name="_LoginPartial" />-->
                 </div>
             </div>
         </nav>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+            <!--imports views code-->
             @RenderBody()
         </main>
     </div>

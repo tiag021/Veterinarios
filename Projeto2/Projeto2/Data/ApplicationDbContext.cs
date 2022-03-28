@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Projeto2.Models;
 
 namespace Projeto2.Data
 {
@@ -9,5 +10,12 @@ namespace Projeto2.Data
             : base(options)
         {
         }
+
+        //definir tabela na base de dados
+
+        public DbSet<Animais> Animais { get; set; }
+        public DbSet<Donos> Donos { get; set; }
+        public DbSet<Veterinarios> Veterinarios { get; set; }
+        public DbSet<Consultas> Consultas { get; set; }
     }
 }
