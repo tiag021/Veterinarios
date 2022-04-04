@@ -6,16 +6,21 @@ namespace Projeto2.Models
     {
         public int Id { get; set; }
 
-        public DateTime Data { get; set; }
+        public DateTime Date { get; set; }
 
-        public string Observacoes { get; set; }
+        public string Obs{ get; set; }
 
         public decimal Preco { get; set; }
 
-        [ForeignKey(nameof(Animais))]
 
-        public int AnimaisFK { get; set; }
+        //Relacoes
+        [ForeignKey(nameof(Animal))]
+        public int AnimalFK { get; set; }
+        public Animais Animal { get; set; }
 
-        public Animais Animais { get; set; }
+
+        [ForeignKey(nameof(Veterinario))]
+        public int VeterinarioFK { get; set; }
+        public Vets Veterinario { get; set; }
     }
 }

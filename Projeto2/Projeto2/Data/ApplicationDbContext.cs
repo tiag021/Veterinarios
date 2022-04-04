@@ -15,7 +15,7 @@ namespace Projeto2.Data
 
         public DbSet<Animais> Animais { get; set; }
         public DbSet<Donos> Donos { get; set; }
-        public DbSet<Veterinarios> Veterinarios { get; set; }
+        public DbSet<Vets> Veterinarios { get; set; }
         public DbSet<Consultas> Consultas { get; set; }
     }
 }

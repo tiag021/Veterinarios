@@ -4,7 +4,6 @@ namespace Projeto2.Models
 {
     public class Animais
     {
-
         public Animais()
         {
             Consultas = new HashSet<Consultas>();
@@ -12,21 +11,26 @@ namespace Projeto2.Models
 
         public int Id { get; set; }
 
-        public string Nome { get; set; }
+        public string Name { get; set; }
 
-        public string raca { get; set; }
+        public string Breed { get; set; }
 
-        public string especies { get; set; }
+        public string Species { get; set; }
 
-        public DateTime aniversario { get; set; }
+        public DateTime BrithDate { get; set; }
 
-        public double weight { get; set; }
+        public double Weight { get; set; }
 
-        public string foto { get; set; }
-        
-       [ForeignKey(nameof(Donos))] //[ForeignKey("Donos")]
-        public int DonosFK { get; set; }
+        public string Photo { get; set; }
 
-        public Donos Donos { get; set; }
+
+        //Relacoes
+        // [] e usado para fazer anotacoes
+        [ForeignKey(nameof(Dono))]  //[ForeignKey("Dono")]
+        public int DonoFK { get; set; }
+        public Donos Dono { get; set; }
+
+        public ICollection<Consultas> Consultas { get; set; }
+
     }
 }
